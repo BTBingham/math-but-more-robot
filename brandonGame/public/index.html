@@ -66,7 +66,8 @@
             
 
             app.ticker.add(delta => gameLoop(delta));
-
+            
+            renderCommandList();
         }
 
         var pathWidth = 140;
@@ -97,14 +98,14 @@
             line = new Graphics();
             line.lineStyle(pathWidth, 0x494949, 1);
             line.moveTo(400, 400);
-            line.lineTo(600, 200);
+            line.lineTo(400, 100);
             line.x = 0;
             line.y = 0;
             app.stage.addChild(line);
             // joint 2
             circle = new Graphics();
             circle.beginFill(0x494949);
-            circle.drawCircle(600, 200, pathWidth/2);
+            circle.drawCircle(400, 100, pathWidth/2);
             circle.endFill();
             circle.x = 0;
             circle.y = 0;
@@ -114,15 +115,15 @@
 
             line = new Graphics();
             line.lineStyle(pathWidth, 0x494949, 1);
-            line.moveTo(600, 200);
-            line.lineTo(600, 800);
+            line.moveTo(400, 100);
+            line.lineTo(700, 100);
             line.x = 0;
             line.y = 0;
             app.stage.addChild(line);
             // joint 3
             circle = new Graphics();
             circle.beginFill(0x494949);
-            circle.drawCircle(600, 800, pathWidth/2);
+            circle.drawCircle(700, 100, pathWidth/2);
             circle.endFill();
             circle.x = 0;
             circle.y = 0;
@@ -132,15 +133,15 @@
 
             line = new Graphics();
             line.lineStyle(pathWidth, 0x494949, 1);
-            line.moveTo(600, 800);
-            line.lineTo(800, 800);
+            line.moveTo(700, 100);
+            line.lineTo(700, 600);
             line.x = 0;
             line.y = 0;
             app.stage.addChild(line);
             // joint 4
             circle = new Graphics();
             circle.beginFill(0x494949);
-            circle.drawCircle(800, 800, pathWidth/2);
+            circle.drawCircle(700, 600, pathWidth/2);
             circle.endFill();
             circle.x = 0;
             circle.y = 0;
@@ -150,15 +151,15 @@
 
             line = new Graphics();
             line.lineStyle(pathWidth, 0x494949, 1);
-            line.moveTo(800, 800);
-            line.lineTo(1100, 100);
+            line.moveTo(700, 600);
+            line.lineTo(500, 600);
             line.x = 0;
             line.y = 0;
             app.stage.addChild(line);
             // joint 5
             circle = new Graphics();
             circle.beginFill(0x494949);
-            circle.drawCircle(1100, 100, pathWidth/2);
+            circle.drawCircle(500, 600, pathWidth/2);
             circle.endFill();
             circle.x = 0;
             circle.y = 0;
@@ -169,15 +170,15 @@
 
             line = new Graphics();
             line.lineStyle(pathWidth, 0x494949, 1);
-            line.moveTo(1100, 100);
-            line.lineTo(1300, 100);
+            line.moveTo(500, 600);
+            line.lineTo(500, 800);
             line.x = 0;
             line.y = 0;
             app.stage.addChild(line);
             // joint 6
             circle = new Graphics();
             circle.beginFill(0x494949);
-            circle.drawCircle(1300, 100, pathWidth/2);
+            circle.drawCircle(500, 800, pathWidth/2);
             circle.endFill();
             circle.x = 0;
             circle.y = 0;
@@ -187,20 +188,85 @@
 
             line = new Graphics();
             line.lineStyle(pathWidth, 0x494949, 1);
-            line.moveTo(1300, 100);
-            line.lineTo(1500, 400);
+            line.moveTo(500, 800);
+            line.lineTo(900, 800);
             line.x = 0;
             line.y = 0;
             app.stage.addChild(line);
             // joint 7
             circle = new Graphics();
             circle.beginFill(0x494949);
-            circle.drawCircle(1500, 400, pathWidth/2);
+            circle.drawCircle(900, 800, pathWidth/2);
             circle.endFill();
             circle.x = 0;
             circle.y = 0;
             app.stage.addChild(circle);
 
+            // path 8
+
+            line = new Graphics();
+            line.lineStyle(pathWidth, 0x494949, 1);
+            line.moveTo(900, 800);
+            line.lineTo(900, 200);
+            line.x = 0;
+            line.y = 0;
+            app.stage.addChild(line);
+            // joint 8
+            circle = new Graphics();
+            circle.beginFill(0x494949);
+            circle.drawCircle(900, 200, pathWidth/2);
+            circle.endFill();
+            circle.x = 0;
+            circle.y = 0;
+            app.stage.addChild(circle);
+
+            // path 9
+
+            line = new Graphics();
+            line.lineStyle(pathWidth, 0x494949, 1);
+            line.moveTo(900, 200);
+            line.lineTo(1200, 200);
+            line.x = 0;
+            line.y = 0;
+            app.stage.addChild(line);
+            // joint 9
+            circle = new Graphics();
+            circle.beginFill(0x494949);
+            circle.drawCircle(1200, 200, pathWidth/2);
+            circle.endFill();
+            circle.x = 0;
+            circle.y = 0;
+            app.stage.addChild(circle);
+
+
+            // path 10
+
+            line = new Graphics();
+            line.lineStyle(pathWidth, 0x494949, 1);
+            line.moveTo(1200, 200);
+            line.lineTo(1200, 400);
+            line.x = 0;
+            line.y = 0;
+            app.stage.addChild(line);
+            // joint 10
+            circle = new Graphics();
+            circle.beginFill(0x494949);
+            circle.drawCircle(1200, 400, pathWidth/2);
+            circle.endFill();
+            circle.x = 0;
+            circle.y = 0;
+            app.stage.addChild(circle);
+
+
+            // path 11
+
+            line = new Graphics();
+            line.lineStyle(pathWidth, 0x494949, 1);
+            line.moveTo(1200, 400);
+            line.lineTo(1500, 400);
+            line.x = 0;
+            line.y = 0;
+            app.stage.addChild(line);
 
             // goal space
             let rectangle = new Graphics();
@@ -322,16 +388,59 @@
         var degreesToRadians = function(degrees) {
             return -degrees * (Math.PI/180);
         };
+
+        var htmlCommands = [];
+        var numCommands = 1;
+
+        function renderCommandList()
+        {
+            var htmlResult = '<ol id="commandList">';
+            for (var i = 0; i < numCommands; i++)
+            {
+                htmlResult += '<li><span>      </span>';
+                htmlResult += 'Velocity:<input type="text" size="5" id="cV'+ i +'"/>';
+                htmlResult += 'Angle:<input type="text" size="3" id="cA'+ i +'"/>';
+                htmlResult += 'Duration:<input type="text" size="3" id="cD'+ i +'"/></li>';
+            }
+            htmlResult += "</ol>";
+            document.getElementById("commandListArea").innerHTML = htmlResult;
+        };
+
+        function executeCommandList()
+        {
+            for (var i = 0; i < numCommands; i++)
+            {
+                var tVel = document.getElementById("cV" + i).value;
+                var tAngle = document.getElementById("cA" + i).value;
+                var tDuration = document.getElementById("cD" + i).value;
+                moveRobot(tVel, tAngle, tDuration);
+            }
+        }
+
+        function resetRobot()
+        {
+            robot.position.set(100,400);
+            roboCommands = [];
+            roboVelocity = 0;
+        }
   </script>
 
 
 
 
 <br><br>
-<textarea id="codeForInjection"></textarea>
-<button id="javascriptInjection" type="button" onclick="eval(document.getElementById('codeForInjection').value)">INJECT</button>
-
-
+<!-- <textarea id="codeForInjection"></textarea>
+<button id="javascriptInjection" type="button" onclick="eval(document.getElementById('codeForInjection').value)">INJECT</button> -->
+<!-- <ol id="commandList">
+    <li><span>      </span>
+        Velocity:<input type="text" size="5"/>
+        Angle:<input type="text" size="4"/>
+        Duration:<input type="text" size="4"/>
+    </li>
+</ol> -->
+<div id="commandListArea"></div><button type="button" onclick="numCommands++; renderCommandList()">+</button>
+<button type="button" onclick="executeCommandList()">RUN COMMANDS</button>
+<button type="button" onclick="resetRobot()">RESET</button>
 </body>
 </html>
 
